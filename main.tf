@@ -32,12 +32,12 @@ data "terraform_remote_state" "vnet" {
     resource_group_name  = "remote-state"
     storage_account_name = "firststorageaccou"
     container_name       = "images"
-    key                  = "pipeline-github-actions/terraform.tfstate"
+    key                  = "azure-vnet/terraform.tfstate"
   }
 }
 
 provider "aws" {
-  region = "eu-central-1"
+  region = "us-west-2"
 
   default_tags {
     tags = {
